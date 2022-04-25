@@ -12,7 +12,7 @@ public class Player_follow : MonoBehaviour
 	private void LateUpdate()
 	{
         camera_follow.z = player.position.z;
-        camera_follow.x = 0;
+        camera_follow.x = player.position.x;
         camera_follow.y = 0;
         transform.position = camera_follow + offset;
     }
