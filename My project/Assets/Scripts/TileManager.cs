@@ -36,6 +36,7 @@ public class TileManager : MonoBehaviour
 		
 		foreach (Pool pool in pools)
 		{
+<<<<<<< Updated upstream
             List<GameObject> objectPool = new List<GameObject>();
 			if (pool.tag == "ground")
 			{
@@ -46,10 +47,20 @@ public class TileManager : MonoBehaviour
                     go.transform.SetParent(transform);
                     objectPool.Add(go);
                 }
+=======
+            Queue<GameObject> objectPool = new Queue<GameObject>();
+			
+            for (int i = 0; i < pool.size; i++)
+            {
+                GameObject go = Instantiate(pool.prefab);
+                go.SetActive(false);
+                objectPool.Enqueue(go);
+>>>>>>> Stashed changes
             }
 			
             poolDictionary.Add(pool.tag, objectPool);
 		}
+<<<<<<< Updated upstream
 		for (int i = 0; i < pools[0].size; i++)
 		{
             objectToSpawn("ground", true, i);
@@ -57,6 +68,15 @@ public class TileManager : MonoBehaviour
        
             
             
+=======
+        pos = Vector3.forward * 150f;
+        objectToSpawn("prefab1", pos);
+		
+    }
+   
+	public void objectToSpawn(string tag, Vector3 postion)
+    {
+>>>>>>> Stashed changes
        
         
         

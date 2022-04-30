@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -523,8 +524,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3272c9b58ba206e4aa46f254ea8bc151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2045191115}
+  player: {fileID: 1790019472}
   offset: {x: 0, y: 2, z: -4}
+  threshold: 600
+--- !u!95 &963194230
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 155387fcfc180d74b82bbd3b176333bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1016463559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,16 +1024,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2045191116}
     - target: {fileID: 6922166457050589348, guid: 76a80f9ff60d19b459529a986250e41c, type: 3}
+<<<<<<< Updated upstream
+=======
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6922166457050589348, guid: 76a80f9ff60d19b459529a986250e41c, type: 3}
+>>>>>>> Stashed changes
       propertyPath: restartUi
       value: 
       objectReference: {fileID: 1271964275}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76a80f9ff60d19b459529a986250e41c, type: 3}
---- !u!4 &2045191115 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1959876496583360830, guid: 76a80f9ff60d19b459529a986250e41c, type: 3}
-  m_PrefabInstance: {fileID: 2045191114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!54 &2045191116 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 5839411928372983527, guid: 76a80f9ff60d19b459529a986250e41c, type: 3}
@@ -1061,7 +1084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137901327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 150}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

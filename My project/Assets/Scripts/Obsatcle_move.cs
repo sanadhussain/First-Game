@@ -5,7 +5,7 @@ using UnityEngine;
 public class Obsatcle_move : MonoBehaviour
 {
     private Vector3 postion;
-    private float maxSpeed = 25f;
+    
     private int target_postion;
     private bool move;
     public Rigidbody rb;
@@ -20,16 +20,7 @@ public class Obsatcle_move : MonoBehaviour
         move= true;
       
     }
-	private void FixedUpdate()
-	{
-       rb.velocity = new Vector3(rb.velocity.x,
-            rb.velocity.y,
-            rb.velocity.z - maxSpeed * Time.deltaTime);
-		if (rb.velocity.magnitude > maxSpeed)
-		{
-            rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
-		}
-	}
+
 	// Update is called once per frame
 	void Update()
     {
@@ -43,14 +34,7 @@ public class Obsatcle_move : MonoBehaviour
         }
              
     }
-    public Vector3 getObstaclePostion()
-	{
-        return postion;
-	}
-    public void setObstaclePostion(Vector3 newPostion)
-	{
-        transform.position = newPostion;
-	}
+
     private void obstacleMoveZ()
 	{
         
