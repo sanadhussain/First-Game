@@ -8,22 +8,23 @@ public class TileManager : MonoBehaviour
     public class Pool
 	{
         public string tag;
-        public GameObject[] prefab;
+        public GameObject prefab;
         public int size;
        
 	}
 
     public List<Pool> pools;
-    public Dictionary<string, List<GameObject>> poolDictionary;
-    private int lastPrefabIndex = 1;
-    private float spawnz =140.0f;
-    private float tileLength = 300f;
-    private Vector3 prefabPostion;
-    private int count;
-    private Vector3 obstaclePostion;
-    private Obsatcle_move [] obstacle;
+    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    private Vector3 pos;
     
 
+    public static TileManager instance;
+    #region singleton
+    private void Awake()
+    {
+        instance = this;
+    }
+    #endregion
 
 
 
@@ -31,23 +32,12 @@ public class TileManager : MonoBehaviour
     private void Start()
 	{
         
-      poolDictionary = new Dictionary<string, List<GameObject>>();
+      poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
 		
 		foreach (Pool pool in pools)
 		{
-<<<<<<< Updated upstream
-            List<GameObject> objectPool = new List<GameObject>();
-			if (pool.tag == "ground")
-			{
-                for (int i = 0; i < pool.size; i++)
-                {
-                    GameObject go = Instantiate(pool.prefab[i]);
-                    go.SetActive(false);
-                    go.transform.SetParent(transform);
-                    objectPool.Add(go);
-                }
-=======
+
             Queue<GameObject> objectPool = new Queue<GameObject>();
 			
             for (int i = 0; i < pool.size; i++)
@@ -55,80 +45,27 @@ public class TileManager : MonoBehaviour
                 GameObject go = Instantiate(pool.prefab);
                 go.SetActive(false);
                 objectPool.Enqueue(go);
->>>>>>> Stashed changes
+
             }
 			
             poolDictionary.Add(pool.tag, objectPool);
 		}
-<<<<<<< Updated upstream
-		for (int i = 0; i < pools[0].size; i++)
-		{
-            objectToSpawn("ground", true, i);
-        }
-       
             
-            
-=======
         pos = Vector3.forward * 150f;
         objectToSpawn("prefab1", pos);
 		
     }
    
-	public void objectToSpawn(string tag, Vector3 postion)
+	public void objectToSpawn(string tag, Vector3 position)
     {
->>>>>>> Stashed changes
-       
-        
-        
+        GameObject obj = poolDictionary[tag].Dequeue();
+        obj.SetActive(true);
+        obj.transform.position = position;
+
+        poolDictionary[tag].Enqueue(obj);
 
     }
-    private void Update()
-    {
-        
-        prefabPostion = poolDictionary["ground"][lastPrefabIndex].GetComponentInChildren<GroundMove>().getTransform();
-        if (prefabPostion.z < 0.1f)
-		{
-            
-            objectToSpawn("ground");
-            poolDictionary["ground"][lastPrefabIndex].GetComponentInChildren<GroundMove>().setTransform(new Vector3(prefabPostion.x, prefabPostion.y, 300f));
-            
-
-        }
-	
-    }
-   
-	public void objectToSpawn(string tag,bool first = false, int index = 0)
-    {
-		if (first == true)
-		{
-            GameObject spawn = poolDictionary[tag][index];
-            spawn.transform.position = Vector3.forward * spawnz;
-            spawn.SetActive(true);
-            spawnz += tileLength;
-		}
-		else
-		{
-            GameObject spawn = poolDictionary[tag][randomGroundPrefabIndex()];
-            spawn.transform.position = Vector3.forward * spawnz;
-            spawn.SetActive(true);
-            
-        }
-        
-        
-
-    }
-    private int randomGroundPrefabIndex()
-    {
-        count = pools[0].prefab.Length;
-        
-        if ( count <= 1)
-            return 0;
-        int randomIdex = lastPrefabIndex;
-        while (randomIdex == lastPrefabIndex)
-            randomIdex = Random.Range(0, count);
-        lastPrefabIndex = randomIdex;
-        return randomIdex;
-    }
+    
 
     /*public GameObject[] tiles;
     

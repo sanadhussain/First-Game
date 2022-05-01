@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
 	public GameObject restartUi;
     private Touch touch;
 	private GameObject[] obstacle;
-<<<<<<< Updated upstream
+
     // Start is called before the first frame update
-    void Start()
-=======
+    
+
 	private float touchBegan;
 	private float touchEnded;
 	private float maxSpeed = 25f;
@@ -30,32 +30,28 @@ public class PlayerMovement : MonoBehaviour
 
 
 	void Start()
->>>>>>> Stashed changes
     {
         Time.timeScale = 0;
 		
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-		Debug.Log(spawnZ);
-		
+	// Update is called once per frame
+	void Update()
+	{
+
+
 		if (Input.touchCount > 0 || Input.GetMouseButtonDown(0))
 		{
-            Time.timeScale = 1;
+			Time.timeScale = 1;
 		}
-<<<<<<< Updated upstream
-    }
-=======
-		if (transform.position.z > groundSpawn )
+
+		if (transform.position.z > groundSpawn)
 		{
 			groundSpawn += groundSpawn + 100f;
-			TileManager.instance.objectToSpawn(names[randomPrefabIndex()],calculateSwpanPosition());
+			TileManager.instance.objectToSpawn(names[randomPrefabIndex()], calculateSwpanPosition());
 		}
-		
 	}
->>>>>>> Stashed changes
+
 	private void FixedUpdate()
 	{
 		rb.velocity = new Vector3(rb.velocity.x,
