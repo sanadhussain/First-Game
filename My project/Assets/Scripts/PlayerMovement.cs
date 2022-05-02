@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 				obstacle[i].GetComponent<Obsatcle_move>().enabled = false;				
 			}
 			Invoke("restartLevel", 1f);
-			Invoke("stopTime", 2f);
+			//Invoke("stopTime", 2f);
 			Invoke("playerInacative", 2.1f);
 
 
@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
 	}
 	private void playerInactive()
 	{
+		
 		GameObject.FindGameObjectWithTag("Player").SetActive(false);
 	}
 	private void stopTime()
