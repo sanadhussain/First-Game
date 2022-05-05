@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
+	public Text scoreUi;
 	public Rigidbody rb;
 	public GameObject restartUi;
     private Touch touch;
 	private GameObject[] obstacle;
-
-    // Start is called before the first frame update
-    
-
+	private float score;
+	private int multiplier = 1;
+	private float snappedBack = 0;
 	private float touchBegan;
 	private float touchEnded;
 	private float maxSpeed = 25f;
@@ -27,11 +25,25 @@ public class PlayerMovement : MonoBehaviour
 	{
 		instance = this;
 	}
-
+	#region Setters
+	public void setScore(float score)
+	{
+		this.score = score;
+	}
+	public void setSpawn(float postion)
+	{
+		this.spawnZ = postion;
+	}
+	public void setGroundSpawn(float position)
+	{
+		this.groundSpawn = position;
+	}
+	#endregion
 
 	void Start()
     {
         Time.timeScale = 0;
+		
 		
     }
 
@@ -39,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
 	void Update()
 	{
 
-
+		updateScoreAndSpeed();
+		
 		if (Input.touchCount > 0 || Input.GetMouseButtonDown(0))
 		{
 			Time.timeScale = 1;
@@ -89,20 +102,33 @@ public class PlayerMovement : MonoBehaviour
 				obstacle[i].GetComponent<Obsatcle_move>().enabled = false;				
 			}
 			Invoke("restartLevel", 1f);
-			//Invoke("stopTime", 2f);
-			Invoke("playerInacative", 2.1f);
+			Invoke("stopTime", 2f);
+			Invoke("playerInactive", 2f);
 
 
 		}
 		
 	}
-	public void setSpawn(float postion)
+	private void updateScoreAndSpeed()
 	{
-		this.spawnZ = postion;
-	}
-	public void setGroundSpawn(float position)
-	{
-		this.groundSpawn = position;
+		score = -4;
+		score = transform.position.z;
+		if (transform.position.z > 604)
+		{
+			snappedBack += 604f;
+		}
+		score += snappedBack;
+		score = score / 4;
+		if (score < 0)
+			scoreUi.text = "0";
+		else
+			scoreUi.text = score.ToString("0");
+		if (score > 300 * multiplier && multiplier <= 5)
+		{
+			maxSpeed += 3;
+			multiplier++;
+		}
+		Debug.Log("MaxSpeed: " + maxSpeed + "Multiplier: " + multiplier);
 	}
 	private void restartLevel()
 	{

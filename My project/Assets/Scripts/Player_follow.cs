@@ -7,6 +7,7 @@ public class Player_follow : MonoBehaviour
     public GameObject player;
     public Vector3 offset;
     public float threshold;
+    
 
 
     private Vector3 camera_follow;
@@ -28,6 +29,7 @@ public class Player_follow : MonoBehaviour
 			}
             PlayerMovement.instance.setSpawn(450f);
             PlayerMovement.instance.setGroundSpawn(200f);
+            PlayerMovement.instance.setScore(600f);
         }
         camera_follow.z = player.transform.position.z;
         camera_follow.x = player.transform.position.x;

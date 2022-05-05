@@ -11,6 +11,7 @@ public class Obsatcle_move : MonoBehaviour
     public Rigidbody rb;
     private float temp;
     private float laneSize = 5.0f;
+    public float MoveSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +80,7 @@ public class Obsatcle_move : MonoBehaviour
         if ((int)transform.position.x <= 5 && (int)transform.position.x >= -5)
         {
             transform.position = new Vector3(
-                    Mathf.MoveTowards(transform.position.x, transform.position.x + target_postion,Time.deltaTime * 8f),
+                    Mathf.MoveTowards(transform.position.x, transform.position.x + target_postion,Time.deltaTime * MoveSpeed),
                     transform.position.y,
                     transform.position.z
                     );

@@ -1,13 +1,15 @@
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; 
 using UnityEngine;
+using System.Collections;
 
 public class MenuScript : MonoBehaviour
 {
+	public Animator animator;
 
-    public void PlayGame()
+	public void PlayGame()
 	{
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		StartCoroutine(Load());
 
 
 	}
@@ -15,4 +17,23 @@ public class MenuScript : MonoBehaviour
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+
+	public void HoverSound()
+	{
+		FindObjectOfType<AudioManager>().Play("buttonHover");
+	}
+	public void ClickedSound()
+	{
+		FindObjectOfType<AudioManager>().Play("buttonClicked");
+	}
+
+	IEnumerator Load()
+	{
+		animator.SetTrigger("end");
+		yield return new WaitForSeconds(1.5f);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		
+	}
+	
 }
+
