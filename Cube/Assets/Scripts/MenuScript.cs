@@ -88,12 +88,7 @@ public class MenuScript : MonoBehaviour
 		
 
 	}
-	IEnumerator timegap(int time, string text)
-	{
-		yield return new WaitForSecondsRealtime(time);
-		wait.text = text;
 
-	}
 	IEnumerator gap()
 	{
 		while (countDownTime > 0)

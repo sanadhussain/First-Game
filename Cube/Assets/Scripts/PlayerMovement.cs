@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.touchCount > 0 || Input.GetMouseButtonDown(0) && play)
+		if ((Input.touchCount > 0 || Input.GetMouseButtonDown(0))&& play)
 		{
 			Time.timeScale = 1;
 		}
