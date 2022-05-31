@@ -427,8 +427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 110.2691, y: 21}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 155.4581, y: 31.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &56773412
 MonoBehaviour:
@@ -448,6 +448,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!114 &56773413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,7 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2105,8 +2108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 253.53934, y: 1.5319}
-  m_SizeDelta: {x: 806.9973, y: 389.1342}
+  m_AnchoredPosition: {x: 392.21213, y: -17.76171}
+  m_SizeDelta: {x: 1084.3429, y: 529.0129}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &411531196
 MonoBehaviour:
@@ -2126,6 +2129,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!114 &411531197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2664,7 +2670,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.00061035156, y: 78.62}
+  m_AnchoredPosition: {x: 0.00048828125, y: 78.62}
   m_SizeDelta: {x: 0, y: 29.390015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &464723370
@@ -2885,8 +2891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 110.2691, y: 21}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 155.4581, y: 31.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532971365
 MonoBehaviour:
@@ -2906,6 +2912,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!114 &532971366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3020,7 +3029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3753,8 +3762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 80}
-  m_SizeDelta: {x: 110.2691, y: 21}
+  m_AnchoredPosition: {x: 0, y: 90}
+  m_SizeDelta: {x: 155.4581, y: 31.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777370143
 MonoBehaviour:
@@ -3774,6 +3783,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!114 &777370144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3888,7 +3900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5017,8 +5029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 130}
-  m_SizeDelta: {x: 110.2691, y: 21}
+  m_AnchoredPosition: {x: 0, y: 160}
+  m_SizeDelta: {x: 155.4581, y: 31.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240688170
 MonoBehaviour:
@@ -5089,7 +5101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5177,6 +5189,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!1 &1257165259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6215,7 +6230,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 110.2691, y: 21}
+  m_SizeDelta: {x: 155.4581, y: 31.2702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615075861
 MonoBehaviour:
@@ -6235,6 +6250,9 @@ MonoBehaviour:
   modeUi: {fileID: 1757605706}
   buttonInfoUi: {fileID: 386450611}
   swipeInfoUi: {fileID: 1973345123}
+  PauseScreen: {fileID: 0}
+  wait: {fileID: 0}
+  timeCounter: {fileID: 0}
 --- !u!114 &1615075862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6349,7 +6367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.20392157}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6392,7 +6410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1629413453
 RectTransform:
   m_ObjectHideFlags: 0

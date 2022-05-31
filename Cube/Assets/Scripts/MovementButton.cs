@@ -41,10 +41,6 @@ public class MovementButton : MonoBehaviour
 			
 			rb.AddForce(-sideSpeed * Time.deltaTime, 0f, 0f, ForceMode.VelocityChange);
 		}
-		else
-		{
-			
-		}
 		
 	}
 }

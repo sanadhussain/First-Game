@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 		public Text coinText;
 		public Text distanceText;
 		public Text scoreText;
+		public ParticleSystem particel;
 	[SerializeField] private GameObject buttonUi;
 	
 	[Header("Forces")]
@@ -30,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
 	private string [] names = {"prefab1", "prefab2", "prefab3", "prefab4", "prefab5" };
 	private float groundSpawn = 200f;
 	private bool swipeMovement;
-
 	public static PlayerMovement instance;
+	public bool play;
 
 	#region singelton
 	public void Awake()
@@ -68,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
 	void Start()
     {
+		play = true;
 		sideForce = UpdateUi.instance.getSensitivity();
 		buttonUi.SetActive(false);
 		if (UpdateUi.instance.getRadio() == "Swipe")
@@ -85,13 +87,14 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
-		updateScoreAndSpeed();
-		
-		if (Input.touchCount > 0 || Input.GetMouseButtonDown(0))
+		if (Input.touchCount > 0 || Input.GetMouseButtonDown(0) && play)
 		{
 			Time.timeScale = 1;
 		}
+		updateScoreAndSpeed();
+		
+		
+		
 
 		if (transform.position.z > groundSpawn)
 		{
@@ -172,24 +175,13 @@ public class PlayerMovement : MonoBehaviour
 		}
 		
 	}
-	private void EndGame()
-	{
-		transform.GetComponent<PlayerMovement>().enabled = false;
-		loadPlayer();
-		resultUi();
-		Invoke("restartLevel", 1f);
-		Invoke("stopTime", 2f);
-		Invoke("playerInactive", 2f);
-		Invoke("deactivateObstacle", 2f);
 
-		
-		
-	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.transform.tag == "Coin" && !collided)
 		{
 			FindObjectOfType<AudioManager>().Play("CoinCollect");
+			particel.Play();
 			other.gameObject.SetActive(false);
 			coin++;
 			coinUi.text = coin.ToString();
@@ -240,6 +232,19 @@ public class PlayerMovement : MonoBehaviour
 			multiplierUi.text = "x" + multiplier.ToString();
 		}
 		
+	}
+	public void EndGame()
+	{
+		transform.GetComponent<PlayerMovement>().enabled = false;
+		loadPlayer();
+		resultUi();
+		Invoke("restartLevel", 1f);
+		Invoke("stopTime", 2f);
+		Invoke("playerInactive", 2f);
+		Invoke("deactivateObstacle", 2f);
+
+
+
 	}
 	private void deactivateObstacle()
 	{

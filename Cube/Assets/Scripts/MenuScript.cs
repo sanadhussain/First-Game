@@ -2,6 +2,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuScript : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class MenuScript : MonoBehaviour
 	public GameObject modeUi;
 	public GameObject buttonInfoUi;
 	public GameObject swipeInfoUi;
+	public GameObject PauseScreen;
+	int time;
+	public TextMeshProUGUI wait;
+
+	public GameObject timeCounter;
+	public int countDownTime;
 	public void PlayGame()
 	{
 		recordUi.SetActive(false);
@@ -70,6 +77,44 @@ public class MenuScript : MonoBehaviour
 		buttonInfoUi.SetActive(true);
 		swipeInfoUi.SetActive(false);
 		animator.SetTrigger("button");
+		
+	}
+	public void Play()
+	{
+		countDownTime = 3;
+		timeCounter.SetActive(true);
+		PauseScreen.SetActive(false);
+		StartCoroutine(gap());
+		
+
+	}
+	IEnumerator timegap(int time, string text)
+	{
+		yield return new WaitForSecondsRealtime(time);
+		wait.text = text;
+
+	}
+	IEnumerator gap()
+	{
+		while (countDownTime > 0)
+		{
+			wait.text = countDownTime.ToString();
+			yield return new WaitForSecondsRealtime(1);
+			countDownTime--;
+		}
+		
+		timeCounter.SetActive(false);
+		Time.timeScale = 1;
+		
+		
+		
+	}
+
+	public void Pause()
+	{
+		PauseScreen.SetActive(true);
+		Time.timeScale = 0;
+		PlayerMovement.instance.play = false;
 		
 	}
 	public void swipeInfoActive()
