@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 491995696116626960}
   - component: {fileID: 3498294372775546900}
   m_Layer: 0
-  m_Name: obstacle (10)
+  m_Name: obstacle (18)
   m_TagString: Obstacle2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98da76763e5592a4d8938917ead3a377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 1
-  MoveSpeed: 8
+  move: 0
+  MoveSpeed: -8
 --- !u!54 &3498294372775546900
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 2515088810890614705}
   - component: {fileID: 6979015211474173614}
   m_Layer: 0
-  m_Name: obstacle (6)
+  m_Name: obstacle (14)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2969417981099041048}
   serializedVersion: 2
-  m_Mass: 30
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 9025370973319778115}
   - component: {fileID: 6836699484578819005}
   m_Layer: 0
-  m_Name: obstacle (7)
+  m_Name: obstacle (15)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,7 +385,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5051105894126312147}
   serializedVersion: 2
-  m_Mass: 30
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -443,7 +443,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5253372557697545948}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 1484214028403287237}
   - component: {fileID: 2223257213833117882}
   m_Layer: 0
-  m_Name: obstacle (11)
+  m_Name: obstacle (19)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7110080429994775440}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 7384403472570070043}
   - component: {fileID: 5982257508743661483}
   m_Layer: 0
-  m_Name: obstacle (5)
+  m_Name: obstacle (13)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,7 +717,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7384403472570070041}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 7384403473077390875}
   - component: {fileID: 1466678674460162862}
   m_Layer: 0
-  m_Name: obstacle (2)
+  m_Name: obstacle (10)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -851,7 +851,7 @@ GameObject:
   - component: {fileID: 7384403473277796501}
   - component: {fileID: 1713706294296860545}
   m_Layer: 0
-  m_Name: obstacle
+  m_Name: obstacle (8)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 7384403473446429441}
   - component: {fileID: 1189099882115522303}
   m_Layer: 0
-  m_Name: obstacle (4)
+  m_Name: obstacle (12)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,7 +1053,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7384403473446429503}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 7384403474057930493}
   - component: {fileID: 1793564832211415850}
   m_Layer: 0
-  m_Name: obstacle (3)
+  m_Name: obstacle (11)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1260,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7384403474057930491}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 7384403474611645129}
   - component: {fileID: 3799994656502120576}
   m_Layer: 0
-  m_Name: obstacle (1)
+  m_Name: obstacle (9)
   m_TagString: Obstacle3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1456,7 +1456,7 @@ GameObject:
   - component: {fileID: 1632892314167293345}
   - component: {fileID: 3964129786430612428}
   m_Layer: 0
-  m_Name: obstacle (9)
+  m_Name: obstacle (17)
   m_TagString: Obstacle2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1618,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8419283963948710155}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -1691,7 +1691,7 @@ GameObject:
   - component: {fileID: 3252709644099604942}
   - component: {fileID: 490195821777782212}
   m_Layer: 0
-  m_Name: obstacle (8)
+  m_Name: obstacle (16)
   m_TagString: Obstacle2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
